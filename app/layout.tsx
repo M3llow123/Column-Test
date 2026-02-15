@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Button } from "@/components/ui/button"
+import { ArrowUpIcon } from "lucide-react"
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,12 +25,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
+      
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header className="flex items-center justify-between px-6 py-4 bg-black dark:bg-zinc-900 shadow">
+        <h1 className="text-white text-lg font-bold">Kafka Pics</h1>
+        <div className="flex item-center gap-3">
+          <Link href="/login">
+        <Button variant="outline">Button</Button>
+        </Link>
+  
+      <Link href="/">
+       <Button variant="outline">Button</Button>
+      </Link>
+  
+      </div>
+      </header> 
+
+  
+    {children}
+         <footer className="flex items-center justify-between px-6 py-4 bg-black dark:bg-zinc-900 shadow"></footer>
       </body>
     </html>
   );
