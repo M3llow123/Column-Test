@@ -21,10 +21,11 @@ export default function Home() {
       </div>
      <div className='relative rounded-lg overflow-hidden shadow-x1 w-80 h-80'> 
         <Image 
-      src="/Imgs/Kafka4.jpg"
-      alt="Kafka4"
+      src="/Imgs/Kafka10.jpg"
+      alt="Kafka10"
       fill 
-      className="object-cover" ></Image>
+      className="object-cover" >
+      </Image>
       </div>
       <div className='relative rounded-lg overflow-hidden shadow-x1 w-80 h-80'> 
         <Image 
